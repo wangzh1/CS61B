@@ -20,7 +20,7 @@ public class NBody {
 			double arg4 = in.readDouble();
 			double arg5 = in.readDouble();
 			String arg6 = in.readString();
-			allPlanets[i] = new Planet(arg1, arg2, arg3, arg4, arg5, "./images/"+arg6);
+			allPlanets[i] = new Planet(arg1, arg2, arg3, arg4, arg5, arg6);
 		}
 		return allPlanets;
 	}

@@ -44,11 +44,6 @@ public class Planet {
 		return (calcForceExertedBy(p) * (p.yyPos - yyPos) / calcDistance(p));
 	}
 
-	public boolean equals (Planet p) {
-		if (xxPos == p.xxPos && yyPos == p.yyPos) return true;
-		return false;
-	}
-
 	public double calcNetForceExertedByX (Planet[] allPlanets) {
 		double sumX = 0;
 		for (Planet x : allPlanets) {
@@ -73,5 +68,9 @@ public class Planet {
 		xxPos += t * xxVel;
 		yyPos += t * yyVel;
 		
+	}
+
+	public void draw() {
+		StdDraw.picture(xxPos, yyPos, imgFileName);
 	}
 }
