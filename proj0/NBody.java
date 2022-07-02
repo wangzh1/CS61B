@@ -62,7 +62,7 @@ public class NBody {
 		}
 
 		StdOut.printf("%d\n", allPlanets.length);
-		StdOut.printf("%.2e\n", radius);
+		StdOut.printf("%.2e\n", r);
 		for (int i = 0; i < allPlanets.length; i++) {
     		StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
                   		  allPlanets[i].xxPos, allPlanets[i].yyPos, allPlanets[i].xxVel,
