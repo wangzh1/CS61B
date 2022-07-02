@@ -38,7 +38,7 @@ public class NBody {
 		In in = new In(filename);
 		int N = in.readInt();
 
-		while (time != T) {
+		while (time < T) {
 			double[] xForces = new double[N];
 			double[] yForces = new double[N];
 			
@@ -60,5 +60,14 @@ public class NBody {
 			StdDraw.pause(10);
 			time += dt;
 		}
+
+		StdOut.printf("%d\n", planets.length);
+		StdOut.printf("%.2e\n", radius);
+		for (int i = 0; i < planets.length; i++) {
+    		StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
+                  		  planets[i].xxPos, planets[i].yyPos, planets[i].xxVel,
+                  	 	  planets[i].yyVel, planets[i].mass, planets[i].imgFileName);   
+}
+
  	}
 }
