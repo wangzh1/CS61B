@@ -1,5 +1,5 @@
 public class LinkedListDeque<T> {
-    public static class Node<T> {
+    private static class Node<T> {
         T item;
         Node<T> next;
         Node<T> front;
@@ -104,7 +104,7 @@ public class LinkedListDeque<T> {
         size = 0;
     }
 
-    public T getRecursiveNode(int index, Node<T> iter) {
+    private T getRecursiveNode(int index, Node<T> iter) {
         if (index == 0) {
             return iter.item;
         }
