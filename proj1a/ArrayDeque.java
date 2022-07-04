@@ -4,6 +4,12 @@ public class ArrayDeque<T> {
 
     public void addFirst(T item) {
         T[] temp;
+        if (size == 0) {
+            size = 1;
+            aDeque = (T[]) new Object[1];
+            aDeque[0] = item;
+            return;
+        }
         if (aDeque.length == size) {
             temp = (T[]) new Object[size * 2];
         } else {
@@ -16,6 +22,12 @@ public class ArrayDeque<T> {
     }
 
     public void addLast(T item) {
+        if (size == 0) {
+            size = 1;
+            aDeque = (T[]) new Object[1];
+            aDeque[0] = item;
+            return;
+        }
         if (aDeque.length == size) {
             T[] temp = (T[]) new Object[size * 2];
             System.arraycopy(aDeque, 0, temp, 0, size);
@@ -48,7 +60,7 @@ public class ArrayDeque<T> {
     public T removeFirst() {
         if (size == 0) {
             return null;
-        } else if (size <= aDeque.length / 4) {
+        } else if (size <= aDeque.length / 3) {
             --size;
             T a = aDeque[0];
             T[] temp = (T[]) new Object[size];
@@ -68,7 +80,7 @@ public class ArrayDeque<T> {
     public T removeLast() {
         if (size == 0) {
             return null;
-        } else if (size <= aDeque.length / 4) {
+        } else if (size <= aDeque.length / 3) {
             T a = aDeque[size - 1];
             --size;
             T[] temp = (T[]) new Object[size];
@@ -76,8 +88,8 @@ public class ArrayDeque<T> {
             aDeque = temp;
             return a;
         } else {
-            --size;
             T a = aDeque[size - 1];
+            --size;
             T[] temp = (T[]) new Object[size];
             System.arraycopy(aDeque, 0, temp, 0, size);
             aDeque = temp;
