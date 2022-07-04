@@ -60,7 +60,7 @@ public class ArrayDeque<T> {
     public T removeFirst() {
         if (size == 0) {
             return null;
-        } else if (size <= aDeque.length / 3) {
+        } else if (size <= aDeque.length / 4) {
             --size;
             T a = aDeque[0];
             T[] temp = (T[]) new Object[size];
@@ -80,7 +80,7 @@ public class ArrayDeque<T> {
     public T removeLast() {
         if (size == 0) {
             return null;
-        } else if (size <= aDeque.length / 3) {
+        } else if (size <= aDeque.length / 4) {
             T a = aDeque[size - 1];
             --size;
             T[] temp = (T[]) new Object[size];
