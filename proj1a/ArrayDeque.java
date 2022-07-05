@@ -9,8 +9,7 @@ public class ArrayDeque<T> {
             aDeque = (T[]) new Object[1];
             aDeque[0] = item;
             return;
-        }
-        if (aDeque.length == size) {
+        } else if (aDeque.length == size) {
             temp = (T[]) new Object[size * 2];
         } else {
             temp = (T[]) new Object[aDeque.length];
@@ -27,8 +26,7 @@ public class ArrayDeque<T> {
             aDeque = (T[]) new Object[1];
             aDeque[0] = item;
             return;
-        }
-        if (aDeque.length == size) {
+        } else if (aDeque.length == size) {
             T[] temp = (T[]) new Object[size * 2];
             System.arraycopy(aDeque, 0, temp, 0, size);
             temp[size] = item;
