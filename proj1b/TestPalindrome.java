@@ -23,10 +23,12 @@ public class TestPalindrome {
         CharacterComparator obo = new OffByOne();
         assertTrue(palindrome.isPalindrome("binding", obn));
         assertTrue(palindrome.isPalindrome("aba"));
+        assertTrue(palindrome.isPalindrome("a"));
         assertTrue(palindrome.isPalindrome("AbA"));
         assertTrue(palindrome.isPalindrome("2323232"));
         assertTrue(palindrome.isPalindrome("AbB", obo));
         assertTrue(palindrome.isPalindrome("&b%", obo));
         assertTrue(palindrome.isPalindrome("", obo));
+        assertTrue(palindrome.isPalindrome("a", obo));
     }
 }
