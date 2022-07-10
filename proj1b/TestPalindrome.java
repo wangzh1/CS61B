@@ -18,7 +18,8 @@ public class TestPalindrome {
 
     @Test
     public void testisPalindrome() {
-        assertTrue(palindrome.isPalindrome("abccba"));
-        assertFalse(palindrome.isPalindrome("aier"));
+
+        CharacterComparator obo = new OffByN(5);
+        assertTrue(palindrome.isPalindrome("binding", obo));
     }
 }

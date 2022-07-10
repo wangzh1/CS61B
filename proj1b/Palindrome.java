@@ -2,7 +2,7 @@ public class Palindrome {
 
     /** Turns a string to a LinkedListDeque. */
     public Deque<Character> wordToDeque(String word) {
-        LinkedListDeque<Character> lld = new LinkedListDeque<>();
+        Deque<Character> lld = new LinkedListDeque<>();
         char[] c = word.toCharArray();
         for (char cc : c) {
             lld.addLast(cc);
@@ -12,7 +12,7 @@ public class Palindrome {
 
     /** Judges if a string is palindrome. */
     public boolean isPalindrome(String word) {
-        if (word.length() == 1 || word.length() == 0) {
+        if (word.length() == 1 || word.isEmpty()) {
             return true;
         }
 
@@ -27,14 +27,14 @@ public class Palindrome {
     }
 
     public boolean isPalindrome(String word, CharacterComparator cc) {
-        if (word.length() == 1 || word.length() == 0) {
+        if (word.length() == 1 || word.isEmpty()) {
             return true;
         }
 
         char[] c = word.toCharArray();
         boolean flag = true;
         for (int i = 0; i < word.length(); i++) {
-            if (!cc.equalChars(c[i], c[c.length - i - 1])) {
+            if (!cc.equalChars(c[i], c[c.length - i - 1]) && (i != c.length - i - 1)) {
                 flag = false;
             }
         }
