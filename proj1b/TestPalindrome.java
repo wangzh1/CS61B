@@ -27,5 +27,6 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome("2323232"));
         assertTrue(palindrome.isPalindrome("AbB", obo));
         assertTrue(palindrome.isPalindrome("&b%", obo));
+        assertTrue(palindrome.isPalindrome("", obo));
     }
 }
