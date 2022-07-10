@@ -19,7 +19,13 @@ public class TestPalindrome {
     @Test
     public void testisPalindrome() {
 
-        CharacterComparator obo = new OffByN(5);
-        assertTrue(palindrome.isPalindrome("binding", obo));
+        CharacterComparator obn = new OffByN(5);
+        CharacterComparator obo = new OffByOne();
+        assertTrue(palindrome.isPalindrome("binding", obn));
+        assertTrue(palindrome.isPalindrome("aba"));
+        assertTrue(palindrome.isPalindrome("AbA"));
+        assertTrue(palindrome.isPalindrome("2323232"));
+        assertTrue(palindrome.isPalindrome("AbB", obo));
+        assertTrue(palindrome.isPalindrome("&b%", obo));
     }
 }
