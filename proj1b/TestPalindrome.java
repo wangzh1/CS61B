@@ -24,6 +24,9 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome("binding", obn));
         assertTrue(palindrome.isPalindrome("aba"));
         assertTrue(palindrome.isPalindrome("a"));
+        assertFalse(palindrome.isPalindrome("cat"));
+        assertTrue(palindrome.isPalindrome(""));
+        assertFalse(palindrome.isPalindrome("noob"));
         assertTrue(palindrome.isPalindrome("AbA"));
         assertTrue(palindrome.isPalindrome("2323232"));
         assertTrue(palindrome.isPalindrome("AbB", obo));
