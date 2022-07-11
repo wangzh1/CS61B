@@ -22,11 +22,13 @@ public class TestArrayDequeGold {
             }
         }
         for (int i = 0; i < 3; ++i) {
-            assertEquals(tmp + "removeFirst()\n", sad.removeFirst(), ads.removeFirst());
+            tmp.append("removeFirst()\n");
+            assertEquals(String.valueOf(tmp), sad.removeFirst(), ads.removeFirst());
         }
 
         for (int i = 0; i < 3; ++i) {
-            assertEquals(tmp + "removeLast()\n", sad.removeLast(), ads.removeLast());
+            tmp.append("removeLast()\n");
+            assertEquals(String.valueOf(tmp), sad.removeLast(), ads.removeLast());
         }
     }
 }
