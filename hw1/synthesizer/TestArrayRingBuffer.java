@@ -11,15 +11,10 @@ public class TestArrayRingBuffer {
         ArrayRingBuffer<Integer> arb = new ArrayRingBuffer<Integer>(10);
         arb.enqueue(1);
         arb.enqueue(12);
-        arb.enqueue(13);
-        arb.enqueue(14);
-        arb.enqueue(15);
-        arb.enqueue(17);
-        arb.enqueue(18);
-        arb.enqueue(145);
-        arb.enqueue(76);
-        arb.enqueue(13);
 
+        for (Integer x : arb) {
+            System.out.println(x);
+        }
     }
 
     /** Calls tests for ArrayRingBuffer. */
