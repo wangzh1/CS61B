@@ -65,6 +65,9 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
      * Return oldest item, but don't remove it.
      */
     public T peek() {
+        if (this.isEmpty()) {
+            throw new RuntimeException("None in the Array");
+        }
         return rb[first];
     }
 
@@ -73,7 +76,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
         return new BufferIter();
     }
 
-    public class BufferIter implements Iterator<T> {
+    private class BufferIter implements Iterator<T> {
         private int ptr;
         public BufferIter() {
             ptr = first;
